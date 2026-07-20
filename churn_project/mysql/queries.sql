@@ -1,21 +1,4 @@
--- =========================================================
--- PROJECT: Bank Customer Churn Analysis
--- FILE: queries.sql
--- TOOL: MySQL Workbench
--- =========================================================
--- HOW TO USE THIS FILE:
--- 1. Open MySQL Workbench
--- 2. Connect to your local MySQL server (localhost)
--- 3. Open this file: File > Open SQL Script > queries.sql
--- 4. Run the statements one section at a time (click the
---    lightning bolt icon, or select a section and press
---    Ctrl+Enter / Cmd+Enter)
--- =========================================================
 
-
--- ---------------------------------------------------------
--- SECTION 1: CREATE DATABASE AND TABLE
--- ---------------------------------------------------------
 CREATE DATABASE IF NOT EXISTS bank_churn_db;
 USE bank_churn_db;
 
@@ -35,29 +18,13 @@ CREATE TABLE IF NOT EXISTS customers (
 );
 
 
--- ---------------------------------------------------------
--- SECTION 2: LOAD THE CSV DATA INTO THE TABLE
--- ---------------------------------------------------------
--- Easiest for beginners - use the MySQL Workbench
--- "Table Data Import Wizard":
---   1. In the left sidebar, right-click "Tables" under bank_churn_db
---   2. Choose "Table Data Import Wizard"
---   3. Select the file: data/bank_customer_data.csv
---   4. Choose "Use existing table" -> customers
---   5. Click Next through the steps and Finish
 
-
--- ---------------------------------------------------------
--- SECTION 3: BASIC CHECKS
--- ---------------------------------------------------------
 SELECT * FROM customers LIMIT 10;
 
 SELECT COUNT(*) AS total_customers FROM customers;
 
 
--- ---------------------------------------------------------
--- SECTION 4: BUSINESS QUESTIONS (the actual "analysis")
--- ---------------------------------------------------------
+
 
 -- Q1. What is the overall churn rate?
 SELECT
@@ -155,9 +122,4 @@ SELECT
 FROM customers
 GROUP BY HasCrCard;
 
--- =========================================================
--- END OF FILE
--- Tip for your resume/interview: be ready to explain what
--- GROUP BY, CASE WHEN, HAVING, and subqueries do in plain
--- English. That matters more than memorizing every query.
--- =========================================================
+
