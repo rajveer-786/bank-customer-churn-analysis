@@ -1,11 +1,4 @@
-"""
-generate_data.py
------------------
-Creates a fake (but realistic) bank customer dataset used for a
-Customer Churn Analysis project. You don't need to run this yourself -
-the CSV is already generated for you as bank_customer_data.csv. This file
-is only here so you understand where the data came from.
-"""
+
 import pandas as pd
 import numpy as np
 import random
